@@ -61,11 +61,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
-    <Compile Include="Motocykl.cs" />
-    <Compile Include="Pojazd.cs" />
+    <Compile Include="Model\Motocykl.cs" />
+    <Compile Include="Model\Pojazd.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Samochod.cs" />
+    <Compile Include="Model\Samochod.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

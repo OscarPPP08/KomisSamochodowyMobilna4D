@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="Model\AddActivity.cs" />
+    <Compile Include="Model\BazaPojazdow.cs" />
     <Compile Include="Model\Motocykl.cs" />
     <Compile Include="Model\Pojazd.cs" />
     <Compile Include="Resources\Resource.designer.cs" />

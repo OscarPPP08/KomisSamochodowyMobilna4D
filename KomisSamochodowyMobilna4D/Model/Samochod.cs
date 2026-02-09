@@ -21,7 +21,7 @@ namespace KomisSamochodowyMobilna4D
         }
         public Samochod(Samochod auto) : base(auto.marka, auto.rokProdukcji)
         {
-            this.liczbaDrzwi = liczbaDrzwi;
+            this.liczbaDrzwi = auto.liczbaDrzwi;
         }
 
         public override double ObliczKosztWynajmu(int dni)

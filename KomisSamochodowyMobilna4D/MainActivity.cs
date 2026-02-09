@@ -1,8 +1,10 @@
 ﻿using Android.App;
+using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Widget;
 using AndroidX.AppCompat.App;
+using KomisSamochodowyMobilna4D.Model;
 using System.Collections.Generic;
 
 namespace KomisSamochodowyMobilna4D
@@ -10,14 +12,7 @@ namespace KomisSamochodowyMobilna4D
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
-        public List<Pojazd> listaPojazdow = new List<Pojazd> {
-            new Samochod(5, "volvo", 2013),
-            new Samochod(5, "bmw", 2017),
-            new Samochod(5, "volkswagen", 2012),
-            new Motocykl(true, "WSK", 1987),
-            new Motocykl(false, "Honda", 2013),
-            new Motocykl(false, "Mrf", 2020)
-        };
+        
         public List<string> listaNazw = new List<string>();
         ListView pojazdyListView;
         ArrayAdapter adapter;
@@ -31,7 +26,7 @@ namespace KomisSamochodowyMobilna4D
             pojazdyListView = FindViewById<ListView>(Resource.Id.listView1);
             przyciskDodaj = FindViewById<ImageButton>(Resource.Id.imageButton1);
 
-            foreach(Pojazd pojazd in listaPojazdow)
+            foreach(Pojazd pojazd in BazaPojazdow.listaPojazdow)
             {
                 listaNazw.Add(pojazd.OpisShort());
             }
@@ -42,7 +37,8 @@ namespace KomisSamochodowyMobilna4D
 
         private void PrzyciskDodaj_Click(object sender, System.EventArgs e)
         {
-            
+            Intent intent = new Intent(this, typeof(AddActivity));
+            StartActivity(intent);
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

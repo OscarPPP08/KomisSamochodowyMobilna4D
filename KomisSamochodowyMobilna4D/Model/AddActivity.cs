@@ -11,7 +11,14 @@ using System.Text;
 
 namespace KomisSamochodowyMobilna4D.Model
 {
-    internal class AddActivity
+    [Activity(Label = "@string/app_dodaj_pojazd")]
+    public class AddActivity : Activity
     {
+        protected override void OnCreate(Bundle savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
+
+            
+        }
     }
 }

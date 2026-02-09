@@ -21,6 +21,7 @@ namespace KomisSamochodowyMobilna4D
         public List<string> listaNazw = new List<string>();
         ListView pojazdyListView;
         ArrayAdapter adapter;
+        ImageButton przyciskDodaj;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -28,6 +29,7 @@ namespace KomisSamochodowyMobilna4D
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
             pojazdyListView = FindViewById<ListView>(Resource.Id.listView1);
+            przyciskDodaj = FindViewById<ImageButton>(Resource.Id.imageButton1);
 
             foreach(Pojazd pojazd in listaPojazdow)
             {
@@ -35,7 +37,14 @@ namespace KomisSamochodowyMobilna4D
             }
 
             pojazdyListView.Adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, listaNazw);
+            przyciskDodaj.Click += PrzyciskDodaj_Click;
         }
+
+        private void PrzyciskDodaj_Click(object sender, System.EventArgs e)
+        {
+            
+        }
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);

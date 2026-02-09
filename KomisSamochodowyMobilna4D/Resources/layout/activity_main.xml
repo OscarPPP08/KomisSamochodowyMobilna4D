@@ -11,12 +11,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/listView1" />
     <ImageButton
-        android:src="@android:drawable/ic_menu_gallery"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="66.0dp"
+        android:layout_height="53.0dp"
         android:id="@+id/imageButton1"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true" />
+        android:layout_alignParentRight="true"
+        android:src="@drawable/przycisk_add"
+        android:scaleType="fitCenter" />
 
-
-</RelativeLayout>   
+</RelativeLayout>

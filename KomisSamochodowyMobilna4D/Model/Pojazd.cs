@@ -28,5 +28,10 @@ namespace KomisSamochodowyMobilna4D
         {
             return $"marka: {this.marka}, rok produkcji: {this.rokProdukcji}";
         }
+
+        public virtual string OpisShort()
+        {
+            return $"{this.marka}, {this.rokProdukcji}";
+        }
     }
 }

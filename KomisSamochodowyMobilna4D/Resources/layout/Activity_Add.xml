@@ -19,8 +19,7 @@
 		android:minWidth="25px"
 		android:minHeight="25px"
 		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:id="@+id/linearLayout2">
+		android:layout_height="wrap_content">
 
 		<RadioGroup
 			android:minWidth="25px"
@@ -41,21 +40,89 @@
 				android:id="@+id/radioButton2" />
 		</RadioGroup>
 		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:visibility="visible"
+			android:layout_height="wrap_content"
+			android:id="@+id/linearLayout2">
+			<LinearLayout
 			android:orientation="horizontal"
 			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+				<TextView
+					android:text="Marka:"
+					android:textAppearance="?android:attr/textAppearanceMedium"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:id="@+id/textView2"
+					android:textColor="#ff000000" />
+				<EditText
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:minWidth="505px"
+					android:id="@+id/editText1" />
+			</LinearLayout>
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<TextView
+					android:text="Rocznik:"
+					android:textAppearance="?android:attr/textAppearanceMedium"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:id="@+id/textView3"
+					android:textColor="#ff000000" />
+				<EditText
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:minWidth="480px"
+					android:id="@+id/editText2" />
+			</LinearLayout>
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<TextView
+					android:text="Liczba drzwi:"
+					android:textAppearance="?android:attr/textAppearanceMedium"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:id="@+id/textView4"
+					android:textColor="#ff000000" />
+				<EditText
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:minWidth="408px"
+					android:id="@+id/editText3" />
+			</LinearLayout>
+		</LinearLayout>
+
+	</LinearLayout>
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:visibility="gone"
+		android:layout_height="wrap_content"
+		android:id="@+id/linearLayout3">>
+		
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
 			android:layout_height="wrap_content">
 			<TextView
 				android:text="Marka:"
 				android:textAppearance="?android:attr/textAppearanceMedium"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:id="@+id/textView2"
+				android:maxWidth="400px"
+				android:id="@+id/textView6"
 				android:textColor="#ff000000" />
 			<EditText
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:minWidth="505px"
-				android:id="@+id/editText1" />
+				android:minWidth="408px"
+				android:id="@+id/editText4" />
 		</LinearLayout>
 		<LinearLayout
 			android:orientation="horizontal"
@@ -66,38 +133,37 @@
 				android:textAppearance="?android:attr/textAppearanceMedium"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:id="@+id/textView3"
+				android:id="@+id/textView7"
 				android:textColor="#ff000000" />
 			<EditText
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:minWidth="480px"
-				android:id="@+id/editText2" />
+				android:minWidth="408px"
+				android:id="@+id/editText5" />
 		</LinearLayout>
 		<LinearLayout
 			android:orientation="horizontal"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content">
 			<TextView
-				android:text="Liczba drzwi:"
+				android:text="Czy Zabytkowy:"
 				android:textAppearance="?android:attr/textAppearanceMedium"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:id="@+id/textView4"
+				android:id="@+id/textView5"
 				android:textColor="#ff000000" />
-			<EditText
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:minWidth="408px"
-				android:id="@+id/editText3" />
+			<CheckBox
+				android:text=""
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:id="@+id/checkBox1" />
 		</LinearLayout>
-		<Button
+		
+	</LinearLayout>
+	<Button
 			android:text="Zapisz"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:id="@+id/button1"
 			app:backgroundTint="#ff000000" />
-
-	</LinearLayout>
-
 </LinearLayout>
